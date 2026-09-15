@@ -1,0 +1,10 @@
+case,min_count_floor,n_yrs,tau,direction
+PJI,5,17,-0.838,div
+PJI,10,15,-0.848,div
+PJI,20,13,-0.846,div
+ACS,5,25,-0.067,flat
+ACS,10,25,-0.067,flat
+ACS,20,22,-0.03,flat
+DRF,5,24,0.42,conv
+DRF,10,17,0.368,conv
+DRF,20,11,0.309,conv

@@ -1,0 +1,4 @@
+case,n_yrs,full_tau,loo_tau_min,loo_tau_max,expected
+PJI,17,-0.838,-0.867,-0.817,divergence
+ACS,25,-0.067,-0.116,0.014,stability
+DRF,24,0.42,0.375,0.478,convergence

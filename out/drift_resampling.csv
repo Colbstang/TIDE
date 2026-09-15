@@ -1,0 +1,4 @@
+case,tau,range_low,range_high,bootstrap_reps,method
+PJI,-0.838235,-0.823529,-0.529412,1500,conditional within-year percentile resampling
+DRF,0.42029,0.039674,0.467572,1500,conditional within-year percentile resampling
+ACS,-0.066667,-0.313333,0.166667,1500,conditional within-year percentile resampling

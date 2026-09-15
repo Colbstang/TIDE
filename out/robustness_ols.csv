@@ -1,0 +1,4 @@
+case,n_abstracts,n_yrs,ols_slope_cos_per_yr,ols_slope_1e4_per_yr,cluster_robust_p,expected
+PJI,2405,17,-0.00109836,-10.98,9.38e-07,divergence
+ACS,1463,25,-3.892e-05,-0.39,7.46e-01,stability
+DRF,636,24,0.00039938,3.99,3.20e-03,convergence

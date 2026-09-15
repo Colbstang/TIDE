@@ -1,0 +1,4 @@
+case,raw_records,excluded_before_embedding,embedded_records,title_only_records,title_only_analyzed,outside_window,below_year_floor,analyzed_records,analyzed_years
+PJI,3149,650,2499,18,17,79,15,2405,17
+ACS,3022,1544,1478,10,10,15,0,1463,25
+DRF,740,85,655,2,2,16,3,636,24

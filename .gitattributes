@@ -1,0 +1,2 @@
+# Frozen CSV bytes are hashed; preserve their original line endings on checkout.
+*.csv -text whitespace=cr-at-eol

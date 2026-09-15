@@ -1,0 +1,4 @@
+case,n,years,tau,slope_e4,yearshuffle_p,yearshuffle_exact_p,yearshuffle_reps,yearshuffle_exceedances,boot_samesign_pct,bootstrap_reps
+PJI,2405,2008-2024,-0.838,-9.7,0.001,0.000999000999000999,1000,0,100.0,1000
+ACS,1463,2000-2024,-0.067,-0.6,0.664,0.6643356643356644,1000,664,70.9,1000
+DRF,636,2000-2024,0.42,3.6,0.005,0.004995004995004995,1000,4,97.9,1000

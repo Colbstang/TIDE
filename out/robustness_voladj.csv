@@ -1,0 +1,4 @@
+case,n_yrs,tau_year_cos,tau_year_vol,tau_cos_vol,partial_tau_year_cos_given_vol,ols_beta_year,ols_p_year,ols_beta_vol,ols_p_vol,partial_direction,expected
+PJI,17,-0.838,0.967,-0.834,-0.227,0.00201147,0.649081,-0.00840919,0.072274,div,divergence
+ACS,25,-0.067,0.768,-0.067,-0.023,0.00076352,0.731505,-0.00194416,0.385787,flat,stability
+DRF,24,0.42,0.854,0.401,0.162,0.00187628,0.625767,0.00114799,0.764993,conv,convergence

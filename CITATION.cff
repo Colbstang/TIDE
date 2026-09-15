@@ -1,0 +1,62 @@
+cff-version: 1.2.0
+message: "If you use this software in published research, please cite it as below."
+title: "TIDE: Temporal Index of Divergent Evidence"
+version: 1.0.0
+license: Apache-2.0
+repository-code: "https://github.com/Colbstang/TIDE"
+type: software
+
+# Software authors; article authors are listed separately below.
+authors:
+  - family-names: Grames
+    given-names: Colby
+    affiliation: "Loma Linda University School of Medicine, Loma Linda, CA"
+  - family-names: Zakarian
+    given-names: Paul
+    affiliation: "Creighton University School of Medicine, Phoenix, AZ"
+  - family-names: Franquemont
+    given-names: Christopher
+    affiliation: "Loma Linda University School of Medicine, Loma Linda, CA"
+  - family-names: Elsissy
+    given-names: Joseph
+    affiliation: "Department of Orthopedics, Arrowhead Regional Medical Center, Colton, CA"
+
+abstract: >
+  TIDE (Temporal Index of Divergent Evidence) measures semantic drift between a
+  fixed recommendation anchor and its year-binned PubMed
+  literature using biomedical text embeddings (MedCPT). For each recommendation it
+  computes the annual mean cosine similarity between the recommendation and the
+  contemporary abstracts, then tests for a monotonic temporal trend (Kendall tau).
+  This public repository contains frozen queries, PMID mappings, cached embeddings,
+  numerical results and analysis scripts for a three-case proof of concept in orthopedic surgery
+  (periprosthetic joint infection, acute compartment syndrome, and distal radius
+  fracture). It is a proof of concept and makes no claim of generalizability,
+  predictive accuracy, sensitivity, or specificity. Article text is excluded;
+  text-dependent reproduction requires a separately retained frozen archive.
+
+keywords:
+  - clinical practice guidelines
+  - semantic drift
+  - evidence surveillance
+  - natural language processing
+  - biomedical text embeddings
+  - MedCPT
+  - orthopedic surgery
+  - PubMed
+
+preferred-citation:
+  type: article
+  title: "What Embedding-Based Guideline-Literature Drift Measures (and What It Doesn't): A Proof-of-Concept and Mechanistic Dissection of TIDE in Orthopedic Surgery"
+  authors:
+    - family-names: Grames
+      given-names: Colby
+    - family-names: Zakarian
+      given-names: Paul
+    - family-names: Franquemont
+      given-names: Christopher
+    - family-names: Cabrera
+      given-names: Andrew
+    - family-names: Elsissy
+      given-names: Joseph
+  year: 2026
+  status: "in-preparation"

@@ -1,0 +1,13 @@
+case,fit_unit,score_unit,n,n_years,tau
+PJI,year,year,2405,17,-0.94117647
+PJI,year,record_mean,2405,17,-0.82352941
+PJI,record,year,2405,17,-0.92647059
+PJI,record,record_mean,2405,17,-0.44117647
+ACS,year,year,1463,25,-0.72
+ACS,year,record_mean,1463,25,-0.4
+ACS,record,year,1463,25,-0.17333333
+ACS,record,record_mean,1463,25,-0.02
+DRF,year,year,636,24,0.14492754
+DRF,year,record_mean,636,24,0.56521739
+DRF,record,year,636,24,0.57246377
+DRF,record,record_mean,636,24,0.63043478

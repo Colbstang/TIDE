@@ -1,0 +1,4 @@
+case,n,n_years,tfidf_tau,pubcount_tau,evidence_volume_tau,percent_high_evidence
+PJI,2405,17,-0.941176,0.966796,0.711131,10.603
+ACS,1463,25,-0.72,0.767716,0.289192,10.526
+DRF,636,24,0.144928,0.854037,0.544436,21.698

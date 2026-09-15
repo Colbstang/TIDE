@@ -1,0 +1,21 @@
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+._*
+.ipynb_checkpoints/
+.venv
+venv/
+out/* 2.csv
+out/run.log
+out/reconstruction.csv
+out/legacy_anchor_reconstruction.csv
+out/rebuilt/
+verification/
+dist/
+output/
+tmp/
+.hf-cache/
+# Third-party article text is retained separately, never in public Git history.
+data/raw/
+data/sensitivity/query_records.json.gz

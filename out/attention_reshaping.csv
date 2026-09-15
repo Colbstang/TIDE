@@ -1,0 +1,16 @@
+case,vignette,term,displacement,cos_iso_anchor,cos_ctx_anchor,pull_to_anchor
+PJI,A_displacement,two-stage,0.097,0.665,0.748,0.083
+PJI,A_displacement,single-stage,0.09,0.644,0.732,0.088
+PJI,A_displacement,debridement,0.097,0.634,0.725,0.091
+PJI,A_displacement,exchange,0.104,0.639,0.729,0.09
+ACS,A_displacement,fasciotomy,0.057,0.696,0.756,0.06
+ACS,A_displacement,decompression,0.08,0.643,0.714,0.071
+ACS,A_displacement,monitoring,0.086,0.608,0.681,0.073
+DRF,A_displacement,nonoperative,0.087,0.695,0.771,0.076
+DRF,A_displacement,operative,0.109,0.639,0.739,0.1
+DRF,A_displacement,casting,0.11,0.593,0.724,0.132
+DRF,A_displacement,fixation,0.089,0.669,0.747,0.078
+DRF,B_minpair,flip,,,,0.0015
+DRF,B_minpair_tfidf,flip,,,,0.0
+PJI,B_minpair,flip,,,,0.0027
+PJI,B_minpair_tfidf,flip,,,,0.0

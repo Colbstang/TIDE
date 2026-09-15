@@ -1,0 +1,5 @@
+case,direction,anchor,sentence,medcpt_cosine,tfidf_cosine
+DRF,concordant,Distal radius fractures in patients older than 65 years should be managed nonoperatively.,Nonoperative management was superior to operative fixation in elderly distal radius fractures.,0.799363,0.185493
+DRF,discordant,Distal radius fractures in patients older than 65 years should be managed nonoperatively.,Operative fixation was superior to nonoperative management in elderly distal radius fractures.,0.797836,0.185493
+PJI,concordant,Chronic periprosthetic joint infection should be treated with two-stage exchange arthroplasty.,Two-stage exchange was superior to single-stage exchange for periprosthetic joint infection.,0.76016,0.501661
+PJI,discordant,Chronic periprosthetic joint infection should be treated with two-stage exchange arthroplasty.,Single-stage exchange was superior to two-stage exchange for periprosthetic joint infection.,0.757489,0.501661

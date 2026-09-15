@@ -1,0 +1,4 @@
+case,n_yrs,tau,phase_randomized_p,phase_exact_p,exceedances,replicates,expected
+PJI,17,-0.838,0.0002,0.0001999600079984003,0,5000,divergence
+ACS,25,-0.067,0.6581,0.6580683863227355,3290,5000,stability
+DRF,24,0.42,0.0124,0.012397520495900819,61,5000,convergence

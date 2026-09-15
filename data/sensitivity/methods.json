@@ -1,0 +1,413 @@
+{
+  "scope": "Three fixed recommendation anchors; five retrieval variants per case.",
+  "evidence_weights": {
+    "Randomized Controlled Trial": 3,
+    "Pragmatic Clinical Trial": 3,
+    "Clinical Trial": 2.5,
+    "Clinical Trial, Phase III": 3,
+    "Clinical Trial, Phase IV": 3,
+    "Controlled Clinical Trial": 2.5,
+    "Comparative Study": 2,
+    "Multicenter Study": 2,
+    "Observational Study": 1.5,
+    "Cohort Study": 1.5,
+    "Evaluation Study": 1.5,
+    "Validation Study": 1.5,
+    "Journal Article": 1,
+    "Case Reports": 0.5
+  },
+  "weight_rule": "Exact publication-type labels; maximum matching weight with a floor of 1.0.",
+  "legacy_drf_anchor": "Distal radius fractures in patients older than 65 years should be managed nonoperatively.",
+  "queries": [
+    {
+      "case": "PJI",
+      "variant": "primary",
+      "source_key": "trial_pji_two_stage_exchange",
+      "query": "(\"periprosthetic joint infection\"[Title/Abstract] OR \"prosthetic joint infection\"[Title/Abstract] OR \"PJI\"[Title/Abstract]) AND (\"two-stage\"[Title/Abstract] OR \"2-stage\"[Title/Abstract] OR \"exchange arthroplasty\"[Title/Abstract] OR \"revision\"[Title/Abstract]) AND English[lang] AND (\"2000/01/01\"[Date - Publication] : \"2024/12/31\"[Date - Publication])\n",
+      "years": {
+        "start": 2000,
+        "end": 2024
+      },
+      "exclude_publication_types": [
+        "Review",
+        "Systematic Review",
+        "Meta-Analysis",
+        "Case Reports",
+        "Editorial",
+        "Letter",
+        "Comment",
+        "News",
+        "Interview",
+        "Historical Article",
+        "Congresses",
+        "Conference Abstracts"
+      ],
+      "mesh_major": [],
+      "journal_whitelist": []
+    },
+    {
+      "case": "PJI",
+      "variant": "expanded_query",
+      "source_key": "trial_pji_two_stage_exchange_expanded",
+      "query": "(\n  \"periprosthetic joint infection\"[Title/Abstract] OR \"prosthetic joint infection\"[Title/Abstract]\n  OR \"PJI\"[Title/Abstract]\n  OR \"infected prosthesis\"[Title/Abstract] OR \"infected prostheses\"[Title/Abstract]\n  OR \"septic arthroplasty\"[Title/Abstract]\n  OR \"infected total knee\"[Title/Abstract] OR \"infected total hip\"[Title/Abstract]\n  OR \"infected joint replacement\"[Title/Abstract] OR \"infected joint arthroplasty\"[Title/Abstract]\n  OR \"Prosthesis-Related Infections\"[Mesh]\n) AND (\n  \"two-stage\"[Title/Abstract] OR \"2-stage\"[Title/Abstract]\n  OR \"exchange arthroplasty\"[Title/Abstract]\n  OR \"revision\"[Title/Abstract]\n  OR \"reimplantation\"[Title/Abstract]\n  OR \"staged revision\"[Title/Abstract]\n  OR \"spacer\"[Title/Abstract]\n) AND (\n  \"hip\"[Title/Abstract] OR \"knee\"[Title/Abstract]\n  OR \"arthroplasty\"[Title/Abstract] OR \"joint\"[Title/Abstract]\n) AND English[lang] AND (\"2000/01/01\"[Date - Publication] : \"2024/12/31\"[Date - Publication])\n",
+      "years": {
+        "start": 2000,
+        "end": 2024
+      },
+      "exclude_publication_types": [
+        "Review",
+        "Systematic Review",
+        "Meta-Analysis",
+        "Case Reports",
+        "Editorial",
+        "Letter",
+        "Comment",
+        "News",
+        "Interview",
+        "Historical Article",
+        "Congresses",
+        "Conference Abstracts"
+      ],
+      "mesh_major": [],
+      "journal_whitelist": []
+    },
+    {
+      "case": "PJI",
+      "variant": "v2_query",
+      "source_key": "trial_pji_two_stage_exchange_v2",
+      "query": "(\n  \"periprosthetic joint infection\"[Title/Abstract] OR \"prosthetic joint infection\"[Title/Abstract]\n  OR \"PJI\"[Title/Abstract]\n  OR \"infected prosthesis\"[Title/Abstract] OR \"infected prostheses\"[Title/Abstract]\n  OR \"septic arthroplasty\"[Title/Abstract]\n  OR \"prosthesis-related infection\"[Title/Abstract]\n  OR \"infected total knee\"[Title/Abstract] OR \"infected total hip\"[Title/Abstract]\n  OR \"infected joint replacement\"[Title/Abstract] OR \"infected joint arthroplasty\"[Title/Abstract]\n  OR \"infected arthroplasty\"[Title/Abstract]\n) AND (\n  \"two-stage\"[Title/Abstract] OR \"2-stage\"[Title/Abstract]\n  OR \"exchange arthroplasty\"[Title/Abstract]\n  OR \"reimplantation\"[Title/Abstract]\n  OR \"staged revision\"[Title/Abstract]\n  OR \"spacer\"[Title/Abstract]\n  OR \"staged exchange\"[Title/Abstract]\n) AND English[lang] AND (\"2000/01/01\"[Date - Publication] : \"2024/12/31\"[Date - Publication])\n",
+      "years": {
+        "start": 2000,
+        "end": 2024
+      },
+      "exclude_publication_types": [
+        "Review",
+        "Systematic Review",
+        "Meta-Analysis",
+        "Case Reports",
+        "Editorial",
+        "Letter",
+        "Comment",
+        "News",
+        "Interview",
+        "Historical Article",
+        "Congresses",
+        "Conference Abstracts"
+      ],
+      "mesh_major": [],
+      "journal_whitelist": []
+    },
+    {
+      "case": "PJI",
+      "variant": "broad_sensitivity",
+      "source_key": "qsens_pji_broad",
+      "query": "(\"periprosthetic joint infection\"[Title/Abstract] OR \"prosthetic joint infection\"[Title/Abstract] OR \"PJI\"[Title/Abstract] OR \"infected arthroplasty\"[Title/Abstract] OR \"infected prosthesis\"[Title/Abstract]) AND (\"treatment\"[Title/Abstract] OR \"management\"[Title/Abstract] OR \"exchange\"[Title/Abstract] OR \"revision\"[Title/Abstract] OR \"DAIR\"[Title/Abstract] OR \"one-stage\"[Title/Abstract] OR \"single-stage\"[Title/Abstract] OR \"two-stage\"[Title/Abstract]) AND English[lang] AND (\"2000/01/01\"[Date - Publication] : \"2024/12/31\"[Date - Publication])\n",
+      "years": {
+        "start": 2000,
+        "end": 2024
+      },
+      "exclude_publication_types": [
+        "Review",
+        "Systematic Review",
+        "Meta-Analysis",
+        "Case Reports",
+        "Editorial",
+        "Letter",
+        "Comment",
+        "News",
+        "Interview",
+        "Historical Article",
+        "Congresses",
+        "Conference Abstracts"
+      ],
+      "mesh_major": [],
+      "journal_whitelist": []
+    },
+    {
+      "case": "PJI",
+      "variant": "narrow_sensitivity",
+      "source_key": "qsens_pji_narrow",
+      "query": "(\"periprosthetic joint infection\"[Title/Abstract] OR \"PJI\"[Title/Abstract]) AND (\"two-stage\"[Title/Abstract] OR \"2-stage\"[Title/Abstract] OR \"exchange arthroplasty\"[Title/Abstract]) AND English[lang] AND (\"2000/01/01\"[Date - Publication] : \"2024/12/31\"[Date - Publication])\n",
+      "years": {
+        "start": 2000,
+        "end": 2024
+      },
+      "exclude_publication_types": [
+        "Review",
+        "Systematic Review",
+        "Meta-Analysis",
+        "Case Reports",
+        "Editorial",
+        "Letter",
+        "Comment",
+        "News",
+        "Interview",
+        "Historical Article",
+        "Congresses",
+        "Conference Abstracts"
+      ],
+      "mesh_major": [],
+      "journal_whitelist": []
+    },
+    {
+      "case": "ACS",
+      "variant": "primary",
+      "source_key": "trial_acute_compartment_fasciotomy",
+      "query": "(\"acute compartment syndrome\"[Title/Abstract] OR \"compartment syndrome\"[Title/Abstract]) AND (fasciotomy[Title/Abstract] OR decompression[Title/Abstract] OR surgical[Title/Abstract]) AND English[lang] AND (\"2000/01/01\"[Date - Publication] : \"2024/12/31\"[Date - Publication])\n",
+      "years": {
+        "start": 2000,
+        "end": 2024
+      },
+      "exclude_publication_types": [
+        "Review",
+        "Systematic Review",
+        "Meta-Analysis",
+        "Case Reports",
+        "Editorial",
+        "Letter",
+        "Comment",
+        "News",
+        "Interview",
+        "Historical Article",
+        "Congresses",
+        "Conference Abstracts"
+      ],
+      "mesh_major": [],
+      "journal_whitelist": []
+    },
+    {
+      "case": "ACS",
+      "variant": "pressure_monitoring",
+      "source_key": "trial_acs_compartment_delta_p",
+      "query": "(\"compartment syndrome\"[Title/Abstract]) AND (\"pressure\"[Title/Abstract] OR \"intracompartmental\"[Title/Abstract] OR \"measurement\"[Title/Abstract] OR \"delta\"[Title/Abstract] OR \"threshold\"[Title/Abstract]) AND English[lang] AND (\"2000/01/01\"[Date - Publication] : \"2024/12/31\"[Date - Publication])\n",
+      "years": {
+        "start": 2000,
+        "end": 2024
+      },
+      "exclude_publication_types": [
+        "Review",
+        "Systematic Review",
+        "Meta-Analysis",
+        "Case Reports",
+        "Editorial",
+        "Letter",
+        "Comment",
+        "News",
+        "Interview",
+        "Historical Article",
+        "Congresses",
+        "Conference Abstracts"
+      ],
+      "mesh_major": [],
+      "journal_whitelist": []
+    },
+    {
+      "case": "ACS",
+      "variant": "fasciotomy_methods",
+      "source_key": "verbatim_compartment_fasciotomy_methods",
+      "query": "(\"fasciotomy\"[Title/Abstract]) AND English[lang] AND (\"2000/01/01\"[Date - Publication] : \"2024/12/31\"[Date - Publication])\n",
+      "years": {
+        "start": 2000,
+        "end": 2024
+      },
+      "exclude_publication_types": [
+        "Review",
+        "Systematic Review",
+        "Meta-Analysis",
+        "Case Reports",
+        "Editorial",
+        "Letter",
+        "Comment",
+        "News",
+        "Interview",
+        "Historical Article",
+        "Congresses",
+        "Conference Abstracts"
+      ],
+      "mesh_major": [],
+      "journal_whitelist": []
+    },
+    {
+      "case": "ACS",
+      "variant": "alt_diagnosis",
+      "source_key": "verbatim_compartment_alternative_methods_of_diagnosis",
+      "query": "(\"fasciotomy\"[Title/Abstract]) AND English[lang] AND (\"2000/01/01\"[Date - Publication] : \"2024/12/31\"[Date - Publication])\n",
+      "years": {
+        "start": 2000,
+        "end": 2024
+      },
+      "exclude_publication_types": [
+        "Review",
+        "Systematic Review",
+        "Meta-Analysis",
+        "Case Reports",
+        "Editorial",
+        "Letter",
+        "Comment",
+        "News",
+        "Interview",
+        "Historical Article",
+        "Congresses",
+        "Conference Abstracts"
+      ],
+      "mesh_major": [],
+      "journal_whitelist": []
+    },
+    {
+      "case": "ACS",
+      "variant": "physical_exam",
+      "source_key": "verbatim_compartment_physical_exam_obtunded",
+      "query": "(\"compartment syndrome\"[Title/Abstract] AND (\"intracompartmental pressure\"[Title/Abstract] OR \"compartment pressure\"[Title/Abstract])) AND English[lang] AND (\"2000/01/01\"[Date - Publication] : \"2024/12/31\"[Date - Publication])\n",
+      "years": {
+        "start": 2000,
+        "end": 2024
+      },
+      "exclude_publication_types": [
+        "Review",
+        "Systematic Review",
+        "Meta-Analysis",
+        "Case Reports",
+        "Editorial",
+        "Letter",
+        "Comment",
+        "News",
+        "Interview",
+        "Historical Article",
+        "Congresses",
+        "Conference Abstracts"
+      ],
+      "mesh_major": [],
+      "journal_whitelist": []
+    },
+    {
+      "case": "DRF",
+      "variant": "primary",
+      "source_key": "trial_aaos_distal_radius_elderly_nonop",
+      "query": "(\"distal radius fracture\"[Title/Abstract] OR \"wrist fracture\"[Title/Abstract]) AND (\"elderly\"[Title/Abstract] OR \"geriatric\"[Title/Abstract] OR \"older\"[Title/Abstract] OR \"aged\"[Title/Abstract] OR \"osteoporotic\"[Title/Abstract]) AND English[lang] AND (\"2000/01/01\"[Date - Publication] : \"2024/12/31\"[Date - Publication])\n",
+      "years": {
+        "start": 2000,
+        "end": 2024
+      },
+      "exclude_publication_types": [
+        "Review",
+        "Systematic Review",
+        "Meta-Analysis",
+        "Case Reports",
+        "Editorial",
+        "Letter",
+        "Comment",
+        "News",
+        "Interview",
+        "Historical Article",
+        "Congresses",
+        "Conference Abstracts"
+      ],
+      "mesh_major": [],
+      "journal_whitelist": []
+    },
+    {
+      "case": "DRF",
+      "variant": "young_operative",
+      "source_key": "trial_aaos_distal_radius_young_op",
+      "query": "(\"distal radius fracture\"[Title/Abstract]) AND (\"operative\"[Title/Abstract] OR \"surgical\"[Title/Abstract] OR \"ORIF\"[Title/Abstract] OR \"fixation\"[Title/Abstract]) AND (\"young\"[Title/Abstract] OR \"adult\"[Title/Abstract] OR \"non-geriatric\"[Title/Abstract] OR \"displacement\"[Title/Abstract]) AND English[lang] AND (\"2000/01/01\"[Date - Publication] : \"2024/12/31\"[Date - Publication])\n",
+      "years": {
+        "start": 2000,
+        "end": 2024
+      },
+      "exclude_publication_types": [
+        "Review",
+        "Systematic Review",
+        "Meta-Analysis",
+        "Case Reports",
+        "Editorial",
+        "Letter",
+        "Comment",
+        "News",
+        "Interview",
+        "Historical Article",
+        "Congresses",
+        "Conference Abstracts"
+      ],
+      "mesh_major": [],
+      "journal_whitelist": []
+    },
+    {
+      "case": "DRF",
+      "variant": "rec_10_casting",
+      "source_key": "verbatim_distal_radius_recommendation_10",
+      "query": "((\"distal radius fracture\"[Title/Abstract] OR \"distal radius\"[Title/Abstract]) AND \"arthroscopic\"[Title/Abstract]) AND English[lang] AND (\"2000/01/01\"[Date - Publication] : \"2024/12/31\"[Date - Publication])\n",
+      "years": {
+        "start": 2000,
+        "end": 2024
+      },
+      "exclude_publication_types": [
+        "Review",
+        "Systematic Review",
+        "Meta-Analysis",
+        "Case Reports",
+        "Editorial",
+        "Letter",
+        "Comment",
+        "News",
+        "Interview",
+        "Historical Article",
+        "Congresses",
+        "Conference Abstracts"
+      ],
+      "mesh_major": [],
+      "journal_whitelist": []
+    },
+    {
+      "case": "DRF",
+      "variant": "rec_15_elderly",
+      "source_key": "verbatim_distal_radius_recommendation_15",
+      "query": "((\"distal radius fracture\"[Title/Abstract] OR \"distal radius\"[Title/Abstract]) AND (\"immobilization\"[Title/Abstract] OR \"immobilisation\"[Title/Abstract])) AND English[lang] AND (\"2000/01/01\"[Date - Publication] : \"2024/12/31\"[Date - Publication])\n",
+      "years": {
+        "start": 2000,
+        "end": 2024
+      },
+      "exclude_publication_types": [
+        "Review",
+        "Systematic Review",
+        "Meta-Analysis",
+        "Case Reports",
+        "Editorial",
+        "Letter",
+        "Comment",
+        "News",
+        "Interview",
+        "Historical Article",
+        "Congresses",
+        "Conference Abstracts"
+      ],
+      "mesh_major": [],
+      "journal_whitelist": []
+    },
+    {
+      "case": "DRF",
+      "variant": "rec_29_nonop",
+      "source_key": "verbatim_distal_radius_recommendation_29",
+      "query": "((\"distal radius fracture\"[Title/Abstract] OR \"distal radius\"[Title/Abstract]) AND \"external fixation\"[Title/Abstract]) AND English[lang] AND (\"2000/01/01\"[Date - Publication] : \"2024/12/31\"[Date - Publication])\n",
+      "years": {
+        "start": 2000,
+        "end": 2024
+      },
+      "exclude_publication_types": [
+        "Review",
+        "Systematic Review",
+        "Meta-Analysis",
+        "Case Reports",
+        "Editorial",
+        "Letter",
+        "Comment",
+        "News",
+        "Interview",
+        "Historical Article",
+        "Congresses",
+        "Conference Abstracts"
+      ],
+      "mesh_major": [],
+      "journal_whitelist": []
+    }
+  ]
+}

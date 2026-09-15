@@ -1,0 +1,108 @@
+{
+  "scope": "PJI, ACS and DRF only; three selected case studies",
+  "python": "3.13",
+  "numerical_stability": "Primary statistical cosines use float64 normalization and scalar reduction. Volume-adjusted coefficients retain 8 decimals and p-values 6 decimals; this avoids float32 BLAS and coarse-rounding discrepancies without changing verification tolerances.",
+  "reconstruction": {
+    "pooling": "attention-mask mean including special tokens; L2 normalization",
+    "max_tokens": 512,
+    "batch_size": 16,
+    "normalized_vector_absolute_tolerance": 1e-05,
+    "primary_tau_absolute_tolerance": 1e-12,
+    "note": "Pinned revisions are verified compatible with every archived vector. Original model/software revisions at acquisition were not recorded. DRF's stored anchor is compared after L2 normalization."
+  },
+  "retrieval": {
+    "historical_timestamp": null,
+    "historical_xml_archived": false,
+    "authority": "The archived normalized JSON text and record order are authoritative for reproduction; the documented queries do not establish the original search execution event."
+  },
+  "analysis_window": [
+    2000,
+    2024
+  ],
+  "models": {
+    "query_encoder": {
+      "id": "ncbi/MedCPT-Query-Encoder",
+      "revision": "d83a36cc6b8e3a5c5e9d9d6ba156808c1643dcbc"
+    },
+    "article_encoder": {
+      "id": "ncbi/MedCPT-Article-Encoder",
+      "revision": "d05a736da4bb84ee4057b7f7999485be6ed85465"
+    }
+  },
+  "artifacts": {
+    "anchors.json": "13c3170d63b08b79dc785e947bbe9eef53277949cffd6b82dab9b6b785e5c2aa",
+    "data/raw/trial_aaos_distal_radius_elderly_nonop_pubmed_2000_2024.json": "bd07fbb1b217352ec0c622b4f588c43d955f953f55472265b5bd7444d0c534f2",
+    "data/raw/trial_acute_compartment_fasciotomy_pubmed_2000_2024.json": "1e6272385a1eb9b7255924040a6fced2ab13d5e215d37efae18f9db5b39af356",
+    "data/raw/trial_pji_two_stage_exchange_pubmed_2000_2024.json": "03721551fdeb62a38d6d988571d1640dc896dfb427c8f01dddc8177dc6b84aa7",
+    "data/embeddings/trial_aaos_distal_radius_elderly_nonop/abstract_vectors.npy": "e489a3cd06c6891c376a7cd7858d8be90e2bba4ca57cb15150b7c218e58c1258",
+    "data/embeddings/trial_aaos_distal_radius_elderly_nonop/guideline_vector.npy": "e7d1bf55cfab09ab5ed7877aa2a513d65a9be8ab5c02ddb5fcde77293dde0301",
+    "data/embeddings/trial_aaos_distal_radius_elderly_nonop/years.npy": "06744b501c434562b830cadc7c944f9287416702cc79eccca32bb1a0ce3e1283",
+    "data/embeddings/trial_acute_compartment_fasciotomy/abstract_vectors.npy": "9b1a5d6ec5d30a2c6a695e10e14eabd6ea888d456494e4c3e25c815feb7d92ed",
+    "data/embeddings/trial_acute_compartment_fasciotomy/guideline_vector.npy": "282aed87122e9891be17813757983e4d55d59c3ceba3085eb25ab7608e7735e9",
+    "data/embeddings/trial_acute_compartment_fasciotomy/years.npy": "6bfce90035c7437d267c95b27602f7681f61d39674cffc4f4652d70cc9836366",
+    "data/embeddings/trial_pji_two_stage_exchange/abstract_vectors.npy": "76aa072541b51f1c0f59603f4f0c540d239da24ca26eaaed5c034e43f6c5f7e3",
+    "data/embeddings/trial_pji_two_stage_exchange/guideline_vector.npy": "aac49b209a02291885e07de16b478e6ea6ff49ecb0c024c4261a5292783af37e",
+    "data/embeddings/trial_pji_two_stage_exchange/years.npy": "82918225eace6568f715453a4ec1a5e480f65e2625d3a807a9793a8f45caa32b",
+    "data/sensitivity/README.md": "37a3dc5ed1c333e371c0674580ea7e02388fb3b58367a1a51044339c47345de9",
+    "data/sensitivity/legacy_drf_anchor.npy": "329e260d7f63a959ab9bb5df436167b6f13b2bfb1f4ec63501ba76aa8d83db22",
+    "data/sensitivity/methods.json": "d811c22a37a0053bf300571eacf76b45ca755fc08736e15458235a64fae4cfa4",
+    "data/sensitivity/query_cosines.csv": "09cdb253491596305826c60981e2540b4e55f42152be90a7277c636df1ef19a8",
+    "data/sensitivity/query_memberships.json.gz": "17e70004455e145135f979be089a337a375ff58b25502d6db6e17d81d9f64109",
+    "data/sensitivity/query_records.json.gz": "05f87121e4544ba7965f7285d06f55151456b816699ad5d80ca6d979ad57af4e"
+  },
+  "reference_artifacts": {
+    "out/records.csv": "9d2fd3efb002d96701fedcc39e6aded85ce58967893862ba780511b7195844a7",
+    "out/source_counts.csv": "cd5a2576b5045b811fe978b4f1f1b970fa2cccce8785efe45a4802f17b9640cd",
+    "out/annual_series.csv": "779371e984b3493d949f4318a59cf967b2df8b177c2e4b128efe667d9480b8b8",
+    "out/matched_baselines.csv": "5523ff25793d3be0b25e3ff634da433af6073138ac85585e4412dc41124da5e0",
+    "out/case_study_metrics.csv": "2a3e36b515a1e156215e33c536d74556f3ee39fa769cdcc031d5fcd0aaa42e1e",
+    "out/drift_resampling.csv": "cb6f1b690e345729f40b740457d00ce6445afe6a55399ec727023fec329bf115",
+    "out/robustness_bincount.csv": "172b6b42202509c6cd00ee4ee954cd10fbe3c441fc09238a4e568f79d1f151eb",
+    "out/robustness_loo.csv": "c39ffe31cf366f30c251b6e7032291d86010f30cc50b637102555313ccddd88a",
+    "out/robustness_null.csv": "e3b7bfc84102d6c8fc917bcc4ef3633e1de735e142c3fa5f0844feebbfed681a",
+    "out/robustness_ols.csv": "8aa5cb6f389c943bd60e180be9de3d46155caa2444654a1f60a1b4c858feb136",
+    "out/robustness_voladj.csv": "95055567101d5c26fd80948601ddab4fdf6c96db1f2dc28ae0b86c278d3ddda7",
+    "out/minimal_pairs.csv": "f2697c5003d5f6723e0e6464c823bc6a00321f3bdbe6d76a9ad606f52eea8ca2",
+    "out/geometry_summary.csv": "f445c72bbe1d2a4f190e9691b8677efa8c8007ec8a01db730297dc0b70802d28",
+    "out/attention_reshaping.csv": "864fd19293e81662e59de3bdf4393fe93f4dcf2eaa4c95193632c0ca60ff2263",
+    "out/word_traj_PJI.csv": "4dfe584163007c903ffa3e80584975a03674677615e74ef986ab4f19b55fa0bb",
+    "out/pji_year_centroids.npy": "f6887585eb1c5e5cfda0de9744036297a2133ca955b8a8cb177e98370984017d",
+    "out/matched_cls.csv": "927efedf253109468008106bc4bbba855747c4f85a38000da3a2a4522d5dc4f1",
+    "out/fig_drift_curves.png": "c28be30e90954979a5ac72a60962273498162d116e325c8b8e1dc11456d28ec2",
+    "out/fig_pipeline.png": "d111e73453d2e9aca43887ce14f5deaeffc696d4502e659d1da754adb80ce3fd",
+    "out/fig_pipeline.svg": "aa99053bf17f238067120e931950a3c5c8f39e5ab5563119277d991542225677",
+    "out/fig_geometry_pji.png": "bb4e51d11d58ff53cb5980a70c90d3481d6b638d1771692be41090faa1fc4d4d",
+    "out/fig_word_trajectories_PJI.png": "7aa0a983cbe57e404bdcca9be80a865d69cdb6d661f945bedb10d6c1d0cb7f7b",
+    "out/evidence_weighting.csv": "ec7d83ea6042a4a413771e659a75de1165ecc0aa1413e33cd12c3cbe414158ae",
+    "out/evidence_weighting_annual.csv": "8605c441fb64f609da8f5cbcd6235e3cba36483a714dc7113e08844112a702be",
+    "out/evidence_weights.csv": "560c5de1e976d3d485890be896d338c66be2c2ddb10d46cf866dd92125cab5fa",
+    "out/query_sensitivity.csv": "90cea19c4f1343d63798ac42075785b52b79cfd8b481b683b67df2e3c7fda594",
+    "out/query_sensitivity_annual.csv": "c4885ac2fa0d32dd835457cf5e65f768128465b595f619c0e6df10a0ef0d9fbd",
+    "out/paper_core.csv": "fcbcbff4c2fb982b81d98ed9e341037e371b6259b5e31038e3921785ff53cb95",
+    "out/tfidf_variants.csv": "92d39aecc0c54d1a84202d273b7505e5266e4794bddd44c641299a96c2ca35ae",
+    "out/tfidf_annual.csv": "c7a7a6c1acaa5d3750f919439980727cd572710cc983f9c6f6ad4df583377943",
+    "out/cross_anchors.csv": "fbcc67eed142b2709af3ecdb51509ea0507cc0ea85912479910a7182e5bb4b28",
+    "out/cross_anchor_annual.csv": "ed0eec9b70d7fd43b60c940e24b4d28e88d4ce8c836ba358dec1c390f21b6dd7",
+    "out/paper_probes.csv": "d6647fee0a5ab52afdda11bbdf40ab8312b22ec3099d5a42bec985aeb1f15792"
+  },
+  "sensitivity": {
+    "methods": "data/sensitivity/methods.json",
+    "current_weighting": "Publication-type weights applied to the primary anchors and the 2000-2024 window.",
+    "query_reanalysis": {
+      "origin": "Dated retrieval using the 15 archived query definitions; not reconstruction of the original primary retrieval.",
+      "started_at_utc": "2026-08-31T04:50:12.672270+00:00",
+      "completed_at_utc": "2026-08-31T04:52:20.869153+00:00",
+      "retrieved_unique_pmids": 12985,
+      "selected_unique_records": 8806,
+      "distinct_selected_texts": 8803,
+      "fixed_anchors": [
+        "PJI",
+        "ACS",
+        "DRF"
+      ],
+      "stored_scores": "data/sensitivity/query_cosines.csv",
+      "raw_responses": "Preserved separately in local verification archive; minimal reproduction starts from normalized records.",
+      "limits": "Five labels per case; ACS has four unique query texts. Inputs overlap and some variants change clinical population/topic. Kendall p-values are nominal and unadjusted."
+    }
+  }
+}

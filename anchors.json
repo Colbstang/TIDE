@@ -1,0 +1,57 @@
+{
+  "description": "Exact primary anchor texts and recovered historical query configuration for the three TIDE cases. Archived records, not a fresh PubMed search, are the reproduction input. Retrieval timestamps and original XML responses were not archived.",
+  "corpus_filters": {
+    "language": "English",
+    "years": "2000-2024",
+    "min_abstracts_per_year": 5,
+    "exclude_publication_types": ["Review", "Systematic Review", "Meta-Analysis", "Case Reports", "Editorial", "Letter", "Comment", "News", "Interview", "Historical Article", "Congresses", "Conference Abstracts"],
+    "journal_whitelist": [],
+    "mesh_major": [],
+    "text": "Nonempty stripped title and abstract joined by one space; title-only records are retained.",
+    "order": "Preserve archived record order after language and publication-type exclusions; require PMID, text, and integer year. Apply the calendar window and annual count floor during analysis, not embedding. No cosine threshold is applied to the primary mean."
+  },
+  "cases": [
+    {
+      "case": "PJI",
+      "trial_id": "trial_pji_two_stage_exchange",
+      "anchor_text": "Chronic periprosthetic joint infection should be treated with two-stage exchange arthroplasty.",
+      "anchor_source": "Representative statement of established practice (no single verbatim AAOS recommendation for this exact claim).",
+      "pubmed_query": "(\"periprosthetic joint infection\"[Title/Abstract] OR \"prosthetic joint infection\"[Title/Abstract] OR \"PJI\"[Title/Abstract]) AND (\"two-stage\"[Title/Abstract] OR \"2-stage\"[Title/Abstract] OR \"exchange arthroplasty\"[Title/Abstract] OR \"revision\"[Title/Abstract]) AND English[lang] AND (\"2000/01/01\"[Date - Publication] : \"2024/12/31\"[Date - Publication])",
+      "n_raw": 3149,
+      "n_vectors": 2499,
+      "n_years": 17,
+      "n_abstracts": 2405,
+      "years_analyzed": "2008-2024",
+      "expected_direction": "divergence",
+      "observed_tau": -0.838
+    },
+    {
+      "case": "ACS",
+      "trial_id": "trial_acute_compartment_fasciotomy",
+      "anchor_text": "Acute compartment syndrome should be treated with emergent fasciotomy.",
+      "anchor_source": "Representative statement of established practice.",
+      "pubmed_query": "(\"acute compartment syndrome\"[Title/Abstract] OR \"compartment syndrome\"[Title/Abstract]) AND (fasciotomy[Title/Abstract] OR decompression[Title/Abstract] OR surgical[Title/Abstract]) AND English[lang] AND (\"2000/01/01\"[Date - Publication] : \"2024/12/31\"[Date - Publication])",
+      "n_raw": 3022,
+      "n_vectors": 1478,
+      "n_years": 25,
+      "n_abstracts": 1463,
+      "years_analyzed": "2000-2024",
+      "expected_direction": "stability",
+      "observed_tau": -0.067
+    },
+    {
+      "case": "DRF",
+      "trial_id": "trial_aaos_distal_radius_elderly_nonop",
+      "anchor_text": "Operative treatment for geriatric patients aged 65 years and older does not lead to improved long-term patient-reported outcomes compared to non-operative treatment for distal radius fractures.",
+      "anchor_source": "Adapted from the AAOS/ASSH 2020 distal radius fracture recommendation; not a verbatim quotation. The short earlier paraphrase is used in separately labeled text and lexical probes, not the matched CLS comparison.",
+      "pubmed_query": "(\"distal radius fracture\"[Title/Abstract] OR \"wrist fracture\"[Title/Abstract]) AND (\"elderly\"[Title/Abstract] OR \"geriatric\"[Title/Abstract] OR \"older\"[Title/Abstract] OR \"aged\"[Title/Abstract] OR \"osteoporotic\"[Title/Abstract]) AND English[lang] AND (\"2000/01/01\"[Date - Publication] : \"2024/12/31\"[Date - Publication])",
+      "n_raw": 740,
+      "n_vectors": 655,
+      "n_years": 24,
+      "n_abstracts": 636,
+      "years_analyzed": "2000-2024",
+      "expected_direction": "convergence",
+      "observed_tau": 0.420
+    }
+  ]
+}
